@@ -3,17 +3,15 @@ package Monster;
 //(c) A+ Computer Science
 //www.apluscompsci.com
 //Name -
-
 import Monster.Monster;
-import static java.lang.System.*; 
+import static java.lang.System.*;
 
-public class Skeleton implements Monster
-{
+public class Zombie implements Monster {
 
     int size = 0;
     String name="";
     
-    Skeleton(int size,String name){
+    Zombie(int size,String name){
         this.size = size;
         this.name = name;
     }
@@ -31,7 +29,7 @@ public class Skeleton implements Monster
     }
 
     public boolean isSmaller(Monster other) {
-        return(this.getHowBig()>other.getHowBig());
+        return(this.getHowBig()<other.getHowBig());
     }
 
     public boolean namesTheSame(Monster other) {
@@ -43,8 +41,6 @@ public class Skeleton implements Monster
 	//add instance variables	
 
 	//add a constructor
-
 	//add code to implement the Monster interface
-
 	//add a toString
 }

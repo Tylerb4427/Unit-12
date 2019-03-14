@@ -3,24 +3,25 @@ package Word;
 //(c) A+ Computer Science
 //www.apluscompsci.com
 //Name -
-
 import static java.lang.System.*;
 
-public class Word implements Comparable<Word>
-{
-	private String word;
+public class Word implements Comparable<Word> {
 
-	public Word( String s )
-	{
-	}
+    private String word;
 
-	public int compareTo( Word rhs )
-	{		
-		return 0;
-	}
+    public Word(String s) {
+        word = s;
+    }
 
-	public String toString()
-	{
-		return "";
-	}
+    public int compareTo(Word rhs) {
+        if (this.toString().length() - rhs.toString().length() == 0) {
+            return this.toString().compareTo(rhs.toString());
+        } else {
+            return this.toString().length() - rhs.toString().length();
+        }
+    }
+
+    public String toString() {
+        return word;
+    }
 }
